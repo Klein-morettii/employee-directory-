@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> <%= title %> </title>
+    </head>
+
+    <body>
+        <h1> <%= title %> </h1>
+        <%- include("partials/errors.ejs") %>
+        <form action="/create" method="post">
+            <fieldset>
+                <legend>Fill the data Correctly</legend>
+
+                <div class="form-rows">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" required>
+                </div>
+
+                <div class="form-rows">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" required>
+                </div>
+
+                <div class="form-rows">
+                    <label for="age">AGE:</label>
+                    <input type="number" name="age" id="age" required min="18" max="75">
+                </div>
+
+                <div class="form-rows">
+                    <label for="phone">PHONE NUMBER:</label>
+                    <input type="tel" name="phone" id="phone" required minlength="10", maxlength="15">
+                </div>
+
+                <div class="form-rows">
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-rows">
+                    <label for="bio">BIO:</label>
+                    <textarea name="bio" id="bio" placeholder="About the employee"></textarea>
+                </div>
+            </fieldset>
+            <button type="submit">CREATE</button>
+        </form>
+    </body>
+</html>

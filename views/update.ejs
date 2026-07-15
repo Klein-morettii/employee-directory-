@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> <%= title %> </title>
+        <link rel="stylesheet" href="/update.css">
+    </head>
+
+    <body>
+        <h1 class="heading"> <%= title %> </h1>
+        <%- include("partials/errors.ejs") %>
+        <form action="/<%= user.id %>/update" method="POST">
+            <fieldset>
+                <legend>Update</legend>
+
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" value="<%= user.firstName %>" required>
+                </div>
+
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>" required>
+                </div>
+
+                <div>
+                    <label for="age">AGE:</label>
+                    <input type="number" name="age" id="age" min="18" max="75" value="<%= user.age %>" required>
+                </div>
+
+                <div>
+                    <label for="phone">PHONE NUMBER:</label>
+                    <input type="tel" name="phone" id="phone" value="<%= user.phone %>" minlength="10" maxlength="15" required>
+                </div>
+
+                <div>
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" name="email" id="email" value="<%= user.email %>" required>
+                </div>
+
+                <div>
+                    <label for="bio">BIO:</label>
+                    <textarea name="bio" id="bio" placeholder="About the employee" required> <%= user.bio %> </textarea>
+                </div>
+
+            </fieldset>
+            <button type="submit">UPDATE</button>
+        </form>
+        <a href="/">BACK</a>
+    </body>
+</html>

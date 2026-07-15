@@ -1,0 +1,25 @@
+body{
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    margin: 1em;
+}
+
+fieldset{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 80px auto;
+    margin-bottom: 8px;
+}
