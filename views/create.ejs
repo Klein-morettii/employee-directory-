@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> <%= title %> </title>
+        <link rel="stylesheet" href="create.css">
     </head>
 
     <body>
@@ -14,23 +15,23 @@
                 <legend>Fill the data Correctly</legend>
 
                 <div class="form-rows">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" name="firstName" id="firstName" required>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" id="first_name" required>
                 </div>
 
                 <div class="form-rows">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" id="lastName" required>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" required>
                 </div>
 
                 <div class="form-rows">
-                    <label for="age">AGE:</label>
-                    <input type="number" name="age" id="age" required min="18" max="75">
+                    <label for="dob">DATE OF BIRTH:</label>
+                    <input type="date" name="dob" id="dob" required min="18" max="75">
                 </div>
 
                 <div class="form-rows">
-                    <label for="phone">PHONE NUMBER:</label>
-                    <input type="tel" name="phone" id="phone" required minlength="10", maxlength="15">
+                    <label for="phone_no">PHONE NUMBER:</label>
+                    <input type="tel" name="phone_no" id="phone_no" required minlength="10", maxlength="15">
                 </div>
 
                 <div class="form-rows">

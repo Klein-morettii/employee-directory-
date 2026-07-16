@@ -19,20 +19,21 @@
     <% if(locals.user){ %>
         <% user.forEach(users=>{ %>
             <div class="indexContainer">
-                <div class="detail">
-                    <span>ID</span>
-                    <span>: <%= users.id %></span>
-                </div>
 
                 <div class="detail">
                     <span>Name</span>
-                    <span>: <%= users.firstName %>
-                            <%= users.lastName %></span>
+                    <span>: <%= users.first_name %>
+                            <%= users.last_name %></span>
+                </div>
+
+                <div class="detail">
+                    <span>DATE OF BIRTH</span>
+                    <span>: <%= users.dob %></span>
                 </div>
 
                 <div class="detail">
                     <span>Phone</span>
-                    <span>: <%= users.phone %></span>
+                    <span>: <%= users.phone_no %></span>
                 </div>
 
                 <div class="detail">
